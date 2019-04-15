@@ -1,4 +1,4 @@
-package com.ticnow.security.idnow.admin.request;
+package com.admin.request;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
@@ -8,19 +8,19 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 
-import com.ticnow.security.model.mobile.Device;
-import com.ticnow.security.model.report.ErollmentReport;
-import com.ticnow.security.model.report.TransactionReport;
+import model.mobile.Device;
+import model.report.ErollmentReport;
+import model.report.TransactionReport;
 import jxl.Workbook;
 import jxl.WorkbookSettings;
 import jxl.write.*;
 import jxl.write.biff.RowsExceededException;
 
-import com.ticnow.security.model.admin.transactions.EnrollTransaction;
-import com.ticnow.security.model.admin.transactions.TransactionAdmin;
-import com.ticnow.security.model.log.AuditLog;
-import com.ticnow.security.model.log.TrazabilityLog;
-import com.ticnow.security.model.mobile.User;
+import model.admin.transactions.EnrollTransaction;
+import model.admin.transactions.TransactionAdmin;
+import security.model.log.AuditLog;
+import security.model.log.TrazabilityLog;
+import security.model.mobile.User;
 
 public class GeneradorExcel {
 
@@ -35,7 +35,7 @@ public class GeneradorExcel {
 			WorkbookSettings conf =  new WorkbookSettings();
 			conf.setEncoding("ISO-8859-1");
 
-			//WritableWorkbook  workbook = Workbook.createWorkbook(new File("C:\\Users\\Atianza 05\\Downloads\\Transacciones.xls"), conf);
+			//WritableWorkbook  workbook = Workbook.createWorkbook(new File("C:\\Users\\Downloads\\Transacciones.xls"), conf);
 			WritableWorkbook  workbook = Workbook.createWorkbook(baos, conf);
 			WritableSheet sheet = workbook.createSheet("Reporte Exel", 0);
 			WritableFont font = new WritableFont(WritableFont.COURIER, 18, WritableFont.BOLD );
@@ -237,7 +237,7 @@ public class GeneradorExcel {
 			WorkbookSettings conf =  new WorkbookSettings();
 			conf.setEncoding("ISO-8859-1");
 
-			//WritableWorkbook  workbook = Workbook.createWorkbook(new File("C:\\Users\\Atianza 05\\Downloads\\Trazabilidad.xls"), conf);
+			//WritableWorkbook  workbook = Workbook.createWorkbook(new File("C:\\Users\\Downloads\\Trazabilidad.xls"), conf);
 			WritableWorkbook  workbook = Workbook.createWorkbook(baos, conf);
 			WritableSheet sheet = workbook.createSheet("Reporte Exel", 0);
 			WritableFont font = new WritableFont(WritableFont.COURIER, 16, WritableFont.BOLD );
@@ -316,7 +316,7 @@ public class GeneradorExcel {
 			WorkbookSettings conf =  new WorkbookSettings();
 			conf.setEncoding("ISO-8859-1");
 
-			//WritableWorkbook  workbook = Workbook.createWorkbook(new File("C:\\Users\\Atianza 05\\Downloads\\Auditoria.xls"), conf);
+			//WritableWorkbook  workbook = Workbook.createWorkbook(new File("C:\\Users\\Downloads\\Auditoria.xls"), conf);
 			WritableWorkbook  workbook = Workbook.createWorkbook(baos, conf);
 			WritableSheet sheet = workbook.createSheet("Reporte Exel", 0);
 			WritableFont font = new WritableFont(WritableFont.COURIER, 16, WritableFont.BOLD );
@@ -361,7 +361,7 @@ public class GeneradorExcel {
 			WorkbookSettings conf =  new WorkbookSettings();
 			conf.setEncoding("ISO-8859-1");
 
-			//WritableWorkbook  workbook = Workbook.createWorkbook(new File("C:\\Users\\Atianza 05\\Downloads\\Enrollment.xls"), conf);
+			//WritableWorkbook  workbook = Workbook.createWorkbook(new File("C:\\Users\\Downloads\\Enrollment.xls"), conf);
 			WritableWorkbook  workbook = Workbook.createWorkbook(baos, conf);			    WritableSheet sheet = workbook.createSheet("Reporte Exel", 0);
 			WritableFont font = new WritableFont(WritableFont.COURIER, 16, WritableFont.BOLD );
 			WritableCellFormat formatCell = new WritableCellFormat(font);
@@ -454,7 +454,7 @@ public class GeneradorExcel {
 			WorkbookSettings conf =  new WorkbookSettings();
 			conf.setEncoding("ISO-8859-1");
 
-			//WritableWorkbook  workbook = Workbook.createWorkbook(new File("C:\\Users\\Atianza 05\\Downloads\\Enrollment.xls"), conf);
+			//WritableWorkbook  workbook = Workbook.createWorkbook(new File("C:\\Users\\Downloads\\Enrollment.xls"), conf);
 			WritableWorkbook  workbook = Workbook.createWorkbook(baos, conf);
 			WritableSheet sheet = workbook.createSheet("Reporte Exel", 0);
 			WritableFont font = new WritableFont(WritableFont.COURIER, 16, WritableFont.BOLD );
