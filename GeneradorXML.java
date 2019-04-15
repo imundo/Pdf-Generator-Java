@@ -1,4 +1,4 @@
-package com.ticnow.security.idnow.admin.request;
+package com.request;
 
 import com.thoughtworks.xstream.io.HierarchicalStreamDriver;
 import com.thoughtworks.xstream.io.HierarchicalStreamWriter;
@@ -6,8 +6,7 @@ import com.thoughtworks.xstream.io.copy.HierarchicalStreamCopier;
 import com.thoughtworks.xstream.io.json.JettisonMappedXmlDriver;
 import com.thoughtworks.xstream.io.xml.Dom4JDriver;
 import com.thoughtworks.xstream.io.xml.PrettyPrintWriter;
-import com.ticnow.security.idnow.admin.response.EnrollWorkflowDetailResponse;
-import com.ticnow.security.model.admin.transactions.EnrollmentTransactions;
+
 
 import java.io.*;
 
