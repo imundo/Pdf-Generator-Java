@@ -1,4 +1,4 @@
-package com.ticnow.security.idnow.admin.request;
+package com.request;
 
 
 import java.io.ByteArrayOutputStream;
@@ -16,14 +16,14 @@ import com.itextpdf.text.Paragraph;
 import com.itextpdf.text.pdf.PdfPCell;
 import com.itextpdf.text.pdf.PdfPTable;
 import com.itextpdf.text.pdf.PdfWriter;
-import com.ticnow.security.model.admin.transactions.EnrollTransaction;
-import com.ticnow.security.model.admin.transactions.TransactionAdmin;
-import com.ticnow.security.model.log.AuditLog;
-import com.ticnow.security.model.log.TrazabilityLog;
-import com.ticnow.security.model.mobile.Device;
-import com.ticnow.security.model.mobile.User;
-import com.ticnow.security.model.report.ErollmentReport;
-import com.ticnow.security.model.report.TransactionReport;
+import model.admin.transactions.EnrollTransaction;
+import model.admin.transactions.TransactionAdmin;
+import model.log.AuditLog;
+import model.log.TrazabilityLog;
+import model.mobile.Device;
+import model.mobile.User;
+import model.report.ErollmentReport;
+import model.report.TransactionReport;
 
 
 public class GeneradorPDF {
@@ -292,15 +292,6 @@ public class GeneradorPDF {
 			PdfPTable tabla = new PdfPTable(10);
 			tabla.setWidthPercentage(100);
 
-			// creacion del documento
-			//Document documento = new Document(PageSize.A4);
-
-			// creacion de la ruta donde se generara el archivo pdf
-			//String rutaAlmacenamiento = "C:\\Users\\Atianza 05\\Downloads\\Trazabilidad.pdf";
-
-			// generamos el PDF y escribimos contenido.
-			//PdfWriter.getInstance(documento, new FileOutputStream(rutaAlmacenamiento));
-
 			//Generamos la celdas de cabecera.
 			PdfPCell celda1 = new PdfPCell(new Paragraph("uuid Transaction", FontFactory.getFont("arial",10,Font.BOLD, BaseColor.BLUE)));
 			PdfPCell celda2 = new PdfPCell(new Paragraph("init OperationDate", FontFactory.getFont("arial",10,Font.BOLD, BaseColor.BLUE)));
@@ -390,14 +381,6 @@ public class GeneradorPDF {
 			PdfPTable tabla = new PdfPTable(12);
 			tabla.setWidthPercentage(100);
 
-			// creacion del documento
-			//Document documento = new Document(PageSize.A4);
-
-			// creacion de la ruta donde se generara el archivo pdf
-			//String rutaAlmacenamiento = "C:\\Users\\Atianza 05\\Downloads\\Auditoria.pdf";
-
-			// generamos el PDF y escribimos contenido.
-			//PdfWriter.getInstance(documento, new FileOutputStream(rutaAlmacenamiento));
 
 			//Generamos la celdas de cabecera.
 			PdfPCell celda1 = new PdfPCell(new Paragraph("Id", FontFactory.getFont("arial",10,Font.BOLD, BaseColor.BLUE)));
@@ -496,11 +479,7 @@ public class GeneradorPDF {
 			tabla.setWidthPercentage(100);
 
 			// creacion del documento
-			//Document documento = new Document(PageSize.A4);
-
-			// creacion de la ruta donde se generara el archivo pdf
-			//String rutaAlmacenamiento = "C:\\Users\\Atianza 05\\Downloads\\Clients.pdf";
-
+		
 			// generamos el PDF y escribimos contenido.
 			//PdfWriter.getInstance(documento, new FileOutputStream(rutaAlmacenamiento));
 
@@ -597,13 +576,7 @@ public class GeneradorPDF {
 			PdfPTable tabla = new PdfPTable(12);
 			tabla.setWidthPercentage(100);
 
-			// creacion del documento
-			//Document documento = new Document(PageSize.A4);
-
-			// creacion de la ruta donde se generara el archivo pdf
-			//String rutaAlmacenamiento = "C:\\Users\\Atianza 05\\Downloads\\Enrollment.pdf";
-
-			// generamos el PDF y escribimos contenido.
+			
 			//PdfWriter.getInstance(documento, new FileOutputStream(rutaAlmacenamiento));
 
 			//Generamos la celdas de cabecera.
