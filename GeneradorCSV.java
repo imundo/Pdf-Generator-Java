@@ -1,4 +1,4 @@
-package com.ticnow.security.idnow.admin.request;
+package com.prueba.request;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
@@ -9,14 +9,14 @@ import java.util.Date;
 import java.util.List;
 
 import com.csvreader.CsvWriter;
-import com.ticnow.security.model.admin.transactions.EnrollTransaction;
-import com.ticnow.security.model.admin.transactions.TransactionAdmin;
-import com.ticnow.security.model.log.AuditLog;
-import com.ticnow.security.model.log.TrazabilityLog;
-import com.ticnow.security.model.mobile.Device;
-import com.ticnow.security.model.mobile.User;
-import com.ticnow.security.model.report.ErollmentReport;
-import com.ticnow.security.model.report.TransactionReport;
+import model.admin.transactions.EnrollTransaction;
+import model.admin.transactions.TransactionAdmin;
+import model.log.AuditLog;
+import model.log.TrazabilityLog;
+import model.mobile.Device;
+import model.mobile.User;
+import model.report.ErollmentReport;
+import model.report.TransactionReport;
 
 public class GeneradorCSV {
 
@@ -80,7 +80,7 @@ public class GeneradorCSV {
 		ByteArrayOutputStream baos = new ByteArrayOutputStream();
 		Charset charset = Charset.forName("UTF-8"); // ISO-8859-1
 		CsvWriter csvwriter = new CsvWriter(baos, ';', charset);
-		//CsvWriter csvwriter = new CsvWriter("C:\\Users\\Atianza 05\\Downloads\\Clients.csv");
+		//CsvWriter csvwriter = new CsvWriter("C:\\Users\\Downloads\\Clients.csv");
 		String [] valores = new String[11];
 
 		for (User clients : listClient) {
@@ -201,7 +201,7 @@ public class GeneradorCSV {
 		ByteArrayOutputStream baos = new ByteArrayOutputStream();
 		Charset charset = Charset.forName("UTF-8"); // ISO-8859-1
 		CsvWriter csvwriter = new CsvWriter(baos, ';', charset);
-		//CsvWriter csvwriter = new CsvWriter("C:\\Users\\Atianza 05\\Downloads\\Clients.csv");
+		//CsvWriter csvwriter = new CsvWriter("C:\\Users\\Downloads\\Clients.csv");
 		String [] valores = new String[11];
 
 		for (Device Dispositivo : deviceList) {
@@ -238,7 +238,7 @@ public class GeneradorCSV {
 		ByteArrayOutputStream baos = new ByteArrayOutputStream();
 		Charset charset = Charset.forName("UTF-8"); // ISO-8859-1
 		CsvWriter csvwriter = new CsvWriter(baos, ',', charset);
-		//CsvWriter csvwriter = new CsvWriter("C:\\Users\\Atianza 05\\Downloads\\Enrollment.csv");
+		//CsvWriter csvwriter = new CsvWriter("C:\\Users\\Downloads\\Enrollment.csv");
 		String [] valores = new String[12];
 
 
